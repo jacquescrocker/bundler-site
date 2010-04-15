@@ -1,0 +1,20 @@
+%h2 bundle console
+
+.contents
+  .bullet
+    .description
+      "bundle console" is similar to "rails console", with the difference being it only uses your Gemfile to load dependencies.
+      It's useful when you want to verify that you can access dependencies via ruby commands in IRB when your web project might
+      not be starting up correctly.
+    :highlight_plain
+      $ bundle console
+
+  .bullet
+    .description
+      You can also use it to check that your groups are set up correctly. Passing an argument will run the Gemfile using a specific environment.
+    .how
+      :highlight_plain
+        $ bundle console test
+
+      .notes
+        This will load all the gems in the <strong>:test</strong> group and give you a console so you can run commands with those dependencies loaded.
